@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hex</title>
+        <link href="/css/canvas.css"rel="stylesheet" type="text/css">
+        <!-- 引入 WeUI CDN 链接 -->
+        <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.min.css"/>
+        <link rel="stylesheet" href="https://weui.io/style/weui.css">
+    </head>
+    <body>
+        <div class="page__bd page__bd_spacing">
+            <a href="javascript:" class="weui-btn weui-btn_default" id="showIOSDialog1">规则</a>
+            
+        </div>
+
+        <div id="dialogs">
+            <!--BEGIN dialog1-->
+            <div class="js_dialog" id="iosDialog1" style="display: none;">
+                <div class="weui-mask"></div>
+                <div id="js_dialog_1" class="weui-half-screen-dialog">
+                    <div class="weui-half-screen-dialog__hd">
+                      <div class="weui-half-screen-dialog__hd__side">
+                        <button class="weui-icon-btn">关闭<i class="weui-icon-close-thin"></i></button>
+                      </div>
+                      <div class="weui-half-screen-dialog__hd__main">
+                        <strong class="weui-half-screen-dialog__title">规则</strong>
+                      </div>
+                    </div>
+                    <div class="weui-half-screen-dialog__bd">
+                      <br>
+                      <br>
+                      1. 本游戏没有棋盘，玩家轮流放置或移动六边形昆虫，这些昆虫连接成蜂巢，移动过程中需要保持蜂巢连通。
+                      2. 当对方的蜂后六边都有昆虫（不论这些昆虫属于哪方），则己方获得胜利。
+                      3. 游戏开始的前四个回合内必须放上蜂后，若前三个回合没放，则第四个回合只能放蜂后。放上蜂后之后，己方昆虫才能移动。
+                      4. 放置昆虫时，只能和己方昆虫连接，不能碰到对方昆虫。
+                      5. 每回合选择移动昆虫时，蜂后走一步，蚂蚁走任意步，蚱蜢跳着走，蜘蛛走三步。
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+                </div>
+            </div>
+            <!--END dialog1-->
+    
+        <canvas id="test-canvas" width="1500" height="1500">
+            <p>你的浏览器不支持Canvas</p>
+        </canvas>
+        
+
+        <div id="root"></div>
+        <script type="text/javascript"  charset="utf-8" src="/js/config.js"></script>
+        <script type="text/javascript"  charset="utf-8" src="/js/insect.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/utils.js"></script>
+        
+        <script type="text/javascript" charset="utf-8" src="/js/board.js"></script>
+        <script type="text/javascript"  charset="utf-8" src="/js/moveRules.js"></script>
+        <script type="text/javascript"  charset="utf-8" src="/js/rule.js"></script>
+        <script type="text/javascript"  charset="utf-8" src="/js/birthRules.js"></script>
+        
+        <script type="text/javascript"  charset="utf-8" src="/js/game.js"></script>
+        <script type="text/javascript"  charset="utf-8" src="/js/gui.js"></script>
+    </body>
+</html>
