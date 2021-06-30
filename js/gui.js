@@ -344,7 +344,7 @@ function drawBoards(boards  , insects, selected = [] , mousePos ){
 
 drawBoards(boards , insects)
 canvas.addEventListener('click', e => {
-    const mousePos = [e.clientX , e.clientY];
+    const mousePos = [e.clientX , e.clientY-hexSide];
     let selected = drawBoards(boards , insects , [] , mousePos)
     switch (status){
         case "null":
